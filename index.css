@@ -350,3 +350,14 @@ i[class*='van-type-'] {
 .host-van-info p {
   margin-block: 10px;
 }
+
+.host-van-detail-nav a {
+  text-decoration: none;
+  margin-right: 20px;
+  color: #4d4d4d;
+}
+
+.host-van-detail-nav a:hover {
+  text-decoration: underline;
+  color: #161616;
+}
