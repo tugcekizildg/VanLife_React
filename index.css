@@ -172,6 +172,7 @@ footer {
   justify-items: center;
   gap: 34px;
   margin-top: 57px;
+  margin-bottom: 34px;
 }
 
 .van-tile a {
@@ -191,6 +192,7 @@ footer {
 
 .van-type {
   height: 34px;
+  margin-right: 20px;
   padding: 6px 26px;
   font-style: normal;
   border: none;
@@ -198,6 +200,7 @@ footer {
   background-color: #ffead0;
   color: #4d4d4d;
   transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
 }
 
 .van-type:hover {
@@ -242,6 +245,11 @@ footer {
 
 i[class*='van-type-'] {
   padding: 7px 14px;
+}
+
+i[class*='van-type-']:hover {
+  color: #161616;
+  cursor: pointer;
 }
 
 /** VAN DETAILS PAGE ***/
