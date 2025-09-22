@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { FaRegUserCircle } from 'react-icons/fa';
 
 export default function Header() {
   const activeStyles = {
@@ -29,6 +30,9 @@ export default function Header() {
           style={({ isActive }) => (isActive ? activeStyles : null)}>
           Vans
         </NavLink>
+        <Link to='login' className='login-link'>
+          <FaRegUserCircle className='login-icon' />
+        </Link>
       </nav>
     </header>
   );
