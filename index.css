@@ -3,11 +3,15 @@
 }
 
 html,
-body {
+body,
+.app {
   margin: 0;
   padding: 0;
   background-color: #fff7ed;
   font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body::-webkit-scrollbar {
@@ -47,7 +51,7 @@ header a:hover {
 }
 
 main {
-  margin-bottom: 84px;
+  flex: 1;
 }
 
 footer {
@@ -55,7 +59,6 @@ footer {
   color: #aaaaaa;
   height: 74px;
   display: flex;
-  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   margin-top: auto;
@@ -280,6 +283,7 @@ i[class*='van-type-']:hover {
 }
 
 .van-detail img {
+  max-width: 300px;
   border-radius: 5px;
   margin-block: 47px;
 }
@@ -303,10 +307,16 @@ i[class*='van-type-']:hover {
   font-size: 1.5rem;
 }
 
+.van-description {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
 .van-detail .link-button {
   background-color: #ff8c38;
   color: white;
   font-size: 1.125rem;
+  max-width: 300px;
 }
 
 .host-nav {
@@ -440,4 +450,22 @@ i[class*='van-type-']:hover {
 .host-van-detail-image {
   border-radius: 5px;
   height: 100px;
+}
+
+/* Not found page */
+.not-found-container {
+  text-align: center;
+  margin-top: 50px;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.not-found-link {
+  background-color: #161616;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+  display: inline-block;
 }
