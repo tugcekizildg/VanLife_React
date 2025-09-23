@@ -528,3 +528,7 @@ i[class*='van-type-']:hover {
   width: 20px;
   height: 20px;
 }
+
+.login-error {
+  color: #e17654;
+}
