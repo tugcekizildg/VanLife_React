@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { loginUser } from '/api';
+import { loginUser } from '../../api';
 
 export default function Login() {
   const [loginFormData, setLoginFormData] = useState({
@@ -11,6 +11,7 @@ export default function Login() {
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -18,11 +19,13 @@ export default function Login() {
     loginUser(loginFormData)
       .then((data) => {
         setError(null);
+        localStorage.setItem('loggedin', true);
+        const redirectPath = location.state?.from || '/host';
+        navigate(redirectPath, { replace: true });
       })
       .catch((err) => setError(err))
       .finally(() => setStatus('idle'));
   }
-
   function handleChange(e) {
     const { name, value } = e.target;
     setLoginFormData((prev) => ({
